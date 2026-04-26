@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useApp } from "@/context/AppContext";
-import Login from "@/pages/Login";
+import Login from "@/components/pages/Login";
 
 export default function RootPage() {
   const { user } = useApp();
