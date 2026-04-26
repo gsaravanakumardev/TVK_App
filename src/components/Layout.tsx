@@ -33,7 +33,7 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { path: "/", labelKey: "dashboard", icon: <LayoutDashboard size={18} /> },
+  { path: "/dashboard", labelKey: "dashboard", icon: <LayoutDashboard size={18} /> },
   { path: "/services", labelKey: "services", icon: <Grid size={18} /> },
   { path: "/intelligence", labelKey: "intelligence", icon: <MapPin size={18} /> },
   { path: "/issues", labelKey: "issues", icon: <AlertTriangle size={18} /> },
@@ -99,7 +99,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {/* Nav Items */}
         <nav className="flex-1 px-2 py-3 flex flex-col gap-1.5 overflow-y-auto">
           {navItems.map((item) => {
-            const isActive = pathname === item.path || (item.path !== "/" && pathname.startsWith(item.path));
+            const isActive = pathname === item.path || (item.path !== "/dashboard" && pathname?.startsWith(item.path));
             return (
               <Link
                 key={item.path}
