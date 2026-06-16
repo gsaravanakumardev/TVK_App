@@ -3,6 +3,7 @@ import "./globals.css";
 import { AppProvider } from "@/context/AppContext";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "My Vetry Tamil Nadu",
@@ -21,6 +22,7 @@ export default function RootLayout({
           <TooltipProvider>
             {children}
             <Toaster />
+            <Analytics />
           </TooltipProvider>
         </AppProvider>
       </body>
